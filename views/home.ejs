@@ -1,0 +1,15 @@
+<%- include("header"); -%>
+<h1>Home</h1>
+<p style="font-size: large;"> <%= homeStartingContent %> </p>
+
+<%  posts.forEach(function(post){ %>
+
+<h1><%=post.title%></h1>
+<p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: large;"><%=post.content%></p>
+     <a href="/posts/<%= post.id %>"%>>Read More</a> 
+
+
+<% }) %>
+
+
+<%- include("footer"); -%>

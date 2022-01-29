@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>BLOG</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <p style="font-size: 40px;" class="navbar-brand">BLOG</p>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- 6 -->
+          <li id="home" style="font-size: large;"><a href="/">HOME</a></li>
+          <li id="about" style="font-size: large;"><a href="/about">ABOUT</a></li>
+          <li id="contact" style="font-size: large;"><a href="/contact">CONTACT</a></li>
+          <li id="compose" style="font-size: large;"><a href="/compose">COMPOSE</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
+
+<h1> <%= title %> </h1>
+<p style="font-size: large;" > <%= content %> </p>
+<button type="button" class="btn btn-dark"><a href="/update/<%= id %>">update</a></button>
+<form class="" action="/delete/<%= id %>" method="post">
+  <div class="form-group">
+    
+  <button class="btn btn-dark" type="submit" name="button" style="position: absolute; right: 120px; color: rgb(71, 71, 211);">delete</button>
+</form>
+
+<%- include("footer"); -%>

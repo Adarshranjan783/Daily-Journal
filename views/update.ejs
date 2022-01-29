@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>BLOG</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <p style="font-size: 40px;" class="navbar-brand">BLOG</p>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- 6 -->
+          <li id="home" style="font-size: large;"><a href="/">HOME</a></li>
+          <li id="about" style="font-size: large;"><a href="/about">ABOUT</a></li>
+          <li id="contact" style="font-size: large;"><a href="/contact">CONTACT</a></li>
+          <li id="compose" style="font-size: large;"><a href="/compose">COMPOSE</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
+<h1>Update</h1>
+<form class="" action="/update/<%= id %>" method="post">
+  <div class="form-group">
+    <label>Title</label>
+    <textarea class="form-control" name="uptitle" rows="1" cols="30"><%= title %></textarea>
+    <label>Post</label>
+    <textarea class="form-control" name="upcontent" rows="5" cols="30"><%= content %></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit" name="button">Update</button>
+</form>
+<%- include("footer"); -%>
